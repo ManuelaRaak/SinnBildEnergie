@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SinnBildEnergie | Vom Funktionieren ins Spüren</title>
+    <!-- Google Fonts: DM Sans & Great Vibes -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F9F6F0;
+            --text-color: #2C2C2C;
+            --deep-blue: #1A365D;
+            --wine-red: #7A2021;
+            --gold: #C5A059;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem 2rem;
+            background-color: var(--white);
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo-subtitle {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            color: var(--wine-red);
+            margin-bottom: 0.2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--deep-blue);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--gold);
+            font-weight: 500;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.15rem;
+            color: var(--deep-blue);
+        }
+
+        .cards-container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            text-align: center;
+            border-top: 5px solid var(--deep-blue);
+        }
+
+        .card h2 {
+            color: var(--deep-blue);
+            margin-bottom: 0.75rem;
+            font-size: 1.6rem;
+        }
+
+        .card p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--wine-red);
+            color: var(--white);
+            padding: 0.85rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #5e1819;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            font-size: 0.95rem;
+            color: var(--deep-blue);
+            background-color: var(--white);
+            border-top: 1px solid var(--gold);
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: var(--wine-red);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-subtitle">SinnBildEnergie</div>
+        <h1>Vom Funktionieren ins Spüren</h1>
+        <div class="tagline">Ein Raum für sensible Frauen & Mamas</div>
+    </header>
+
+    <main>
+        <div class="intro">
+            <p>Willkommen in deinem geschützten Raum. Lass den Alltag hinter dir, verbinde dich mit deiner Intuition und finde zurück zu deiner ureigenen Kraft.</p>
+        </div>
+
+        <div class="cards-container">
+            <!-- Patreon Mitgliedschaft -->
+            <section class="card" style="border-top-color: var(--wine-red);">
+                <h2>Mitgliedschaft & FrauenRaum</h2>
+                <p>Werde Teil unserer Gemeinschaft. Erhalte monatliche Impulse, Begleitung und den geschützten Austausch auf Patreon.</p>
+                <a href="https://www.patreon.com/c/sinnbildenergie/membership" class="btn" target="_blank" rel="noopener">Mitglied werden</a>
+            </section>
+
+            <!-- Luma Events -->
+            <section class="card" style="border-top-color: var(--deep-blue);">
+                <h2>MalZeit & Events</h2>
+                <p>Erlebe unsere gemeinsamen kreativen Auszeiten und Live-Termine. Sichere dir deinen Platz bei den kommenden Luma-Events.</p>
+                <a href="https://luma.com/calendar/manage/cal-AwxBixdOuc00jRW" class="btn" target="_blank" rel="noopener">Termine ansehen</a>
+            </section>
+
+            <!-- Redbubble Shop -->
+            <section class="card" style="border-top-color: var(--gold);">
+                <h2>Kunst & Shop</h2>
+                <p>Entdecke beseelte Motive, Bilder und Produkte im Redbubble-Shop, der dein Zuhause und deinen Alltag verzaubert.</p>
+                <a href="https://www.redbubble.com/de/people/SeelenBilder/explore?_gl=1%2A193zkg3%2A_up%2AMQ..&asc=u&gbraid=0AAAAADuDTRxxgHB1aFKX4Q7C5lDPRES2A&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6A6alxKtqMaeFY8MdbtUWBtnxBPyRVbTYwxxBU981ckCdjA6Mye-fRoC4EwQAvD_BwE&page=1&sortOrder=recent" class="btn" target="_blank" rel="noopener">Zum Shop</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Kontakt: <a href="mailto:sinnbildenergie@gmail.com">sinnbildenergie@gmail.com</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2026 SinnBildEnergie. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+</html>
