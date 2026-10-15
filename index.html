@@ -16,9 +16,7 @@
             --wine-red: #581824;
             --gold: #D4AF37;
             --cream: #F8F5EE;
-            --white: #FFFFFF;
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --border-gold: rgba(212, 175, 55, 0.4);
+            --card-blue: #0D1F42;
         }
 
         * {
@@ -28,8 +26,8 @@
         }
 
         body {
-            background-color: var(--deep-blue);
-            color: var(--cream);
+            background-color: #081633;
+            color: #F8F5EE;
             font-family: 'DM Sans', sans-serif;
             line-height: 1.7;
             min-height: 100vh;
@@ -39,17 +37,17 @@
 
         /* Header */
         header {
-            background-color: var(--deep-blue);
-            color: var(--cream);
+            background-color: #081633;
+            color: #F8F5EE;
             text-align: center;
             padding: 70px 20px 40px;
-            border-bottom: 1px solid var(--border-gold);
+            border-bottom: 2px solid #D4AF37;
         }
 
         header h1 {
             font-family: 'Great Vibes', cursive;
             font-size: 4.5rem;
-            color: var(--gold);
+            color: #D4AF37;
             font-weight: normal;
             margin-bottom: 10px;
             line-height: 1.2;
@@ -57,11 +55,10 @@
 
         header .subtitle {
             font-size: 1.1rem;
-            color: var(--cream);
+            color: #F8F5EE;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 400;
-            opacity: 0.9;
             max-width: 700px;
             margin: 0 auto;
         }
@@ -77,10 +74,9 @@
 
         .section-title {
             text-align: center;
-            color: var(--cream);
+            color: #F8F5EE;
             font-size: 1.8rem;
             margin-bottom: 30px;
-            position: relative;
             font-weight: 500;
         }
 
@@ -89,42 +85,39 @@
             display: block;
             width: 50px;
             height: 2px;
-            background-color: var(--gold);
+            background-color: #D4AF37;
             margin: 12px auto 0;
         }
 
         /* Der Frauenraum Card */
         .frauenraum-card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--gold);
+            background-color: #0D1F42;
+            border: 2px solid #D4AF37;
             border-radius: 12px;
             padding: 40px;
             margin-bottom: 45px;
             text-align: center;
-            backdrop-filter: blur(5px);
         }
 
         .frauenraum-card h2 {
             font-family: 'Great Vibes', cursive;
             font-size: 3.5rem;
-            color: var(--gold);
+            color: #D4AF37;
             margin-bottom: 10px;
             font-weight: normal;
         }
 
         .frauenraum-card .tagline {
             font-size: 1.15rem;
-            color: var(--cream);
+            color: #F8F5EE;
             font-weight: 500;
             margin-bottom: 20px;
-            opacity: 0.95;
         }
 
         .frauenraum-card p {
             font-size: 1.05rem;
-            color: var(--cream);
+            color: #F8F5EE;
             margin-bottom: 25px;
-            opacity: 0.85;
             max-width: 720px;
             margin-left: auto;
             margin-right: auto;
@@ -132,8 +125,8 @@
 
         /* Akkordeon "Wie du mitmachen kannst" */
         details {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-gold);
+            background-color: #0D1F42;
+            border: 1px solid #D4AF37;
             border-radius: 8px;
             margin-bottom: 15px;
             overflow: hidden;
@@ -143,13 +136,12 @@
             padding: 18px 24px;
             font-size: 1.05rem;
             font-weight: 500;
-            color: var(--cream);
+            color: #F8F5EE;
             cursor: pointer;
             list-style: none;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            user-select: none;
         }
 
         summary::-webkit-details-marker {
@@ -159,20 +151,19 @@
         summary::after {
             content: '＋';
             font-size: 1.2rem;
-            color: var(--gold);
+            color: #D4AF37;
         }
 
         details[open] summary::after {
             content: '－';
-            color: var(--gold);
+            color: #D4AF37;
         }
 
         .accordion-content {
             padding: 0 24px 24px;
-            color: var(--cream);
+            color: #F8F5EE;
             font-size: 0.95rem;
-            opacity: 0.85;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            border-top: 1px solid #D4AF37;
             margin-top: 5px;
         }
 
@@ -190,10 +181,10 @@
         }
 
         .card {
-            background-color: var(--card-bg);
+            background-color: #0D1F42;
             padding: 30px 20px;
             border-radius: 10px;
-            border: 1px solid var(--border-gold);
+            border: 1px solid #D4AF37;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -201,7 +192,7 @@
         }
 
         .card h3 {
-            color: var(--gold);
+            color: #D4AF37;
             font-size: 1.3rem;
             margin-bottom: 10px;
             font-weight: 500;
@@ -209,8 +200,7 @@
 
         .card p {
             font-size: 0.95rem;
-            color: var(--cream);
-            opacity: 0.85;
+            color: #F8F5EE;
             margin-bottom: 20px;
             flex-grow: 1;
         }
@@ -218,48 +208,32 @@
         /* Buttons */
         .btn {
             display: inline-block;
-            padding: 11px 26px;
-            background-color: transparent;
-            color: var(--cream);
-            border: 1px solid var(--cream);
+            padding: 12px 24px;
+            background-color: #581824;
+            color: #F8F5EE;
+            border: 1px solid #D4AF37;
             text-decoration: none;
             border-radius: 30px;
             font-weight: 500;
             font-size: 0.95rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: var(--wine-red);
-            border-color: var(--wine-red);
-            color: var(--cream);
+            text-align: center;
         }
 
         .btn-gold {
-            background-color: var(--gold);
-            color: var(--deep-blue);
-            border: 1px solid var(--gold);
-            font-weight: 600;
-        }
-
-        .btn-gold:hover {
-            background-color: var(--wine-red);
-            border-color: var(--wine-red);
-            color: var(--cream);
+            background-color: #D4AF37;
+            color: #081633;
+            border: 1px solid #D4AF37;
+            font-weight: 700;
         }
 
         footer {
-            background-color: var(--deep-blue);
-            color: var(--cream);
+            background-color: #081633;
+            color: #F8F5EE;
             text-align: center;
             padding: 35px 20px;
             font-size: 0.85rem;
             margin-top: auto;
-            border-top: 1px solid var(--border-gold);
-        }
-
-        footer p {
-            opacity: 0.7;
+            border-top: 1px solid #D4AF37;
         }
 
         @media (max-width: 600px) {
@@ -289,7 +263,7 @@
                 Der Frauenraum ist ein vertrauter, geschützter Ort der Begegnung und des Austauschs. 
                 Hier darfst du so sein, wie du bist – ohne Erwartungen, ohne Rollen, ganz bei dir.
             </p>
-            <a href="https://luma.com/zmjvgaie" target="_blank" class="btn btn-gold">Aktuelle Frauenraum-Termine ansehen</a>
+            <a href="https://luma.com/home" target="_blank" class="btn btn-gold">Aktuelle Frauenraum-Termine ansehen</a>
         </section>
 
         <!-- Wie du mitmachen kannst (Akkordeon) -->
@@ -332,19 +306,19 @@
                 <div class="card">
                     <h3>Community & Patreon</h3>
                     <p>Vertiefe deine Praxis, erhalte exklusive Impulse und sei Teil unserer festen Frauenkreis-Community.</p>
-                    <a href="https://www.patreon.com" target="_blank" class="btn">Zu Patreon</a>
+                    <a href="https://www.patreon.com/c/sinnbildenergie/membership" target="_blank" class="btn">Zu Patreon</a>
                 </div>
 
                 <div class="card">
                     <h3>Events & Treffen</h3>
                     <p>Finde alle anstehenden Frauenräume, Workshops und Auszeiten im Überblick.</p>
-                    <a href="https://luma.com/zmjvgaie" target="_blank" class="btn btn-gold">Events auf Luma</a>
+                    <a href="https://luma.com/home" target="_blank" class="btn btn-gold">Events auf Luma</a>
                 </div>
 
                 <div class="card">
                     <h3>Kreativ-Shop</h3>
                     <p>Entdecke liebevoll gestaltete Designs und Inspirationen für deine tägliche Auszeit.</p>
-                    <a href="https://www.redbubble.com" target="_blank" class="btn">Zum Redbubble Shop</a>
+                    <a href="https://www.redbubble.com/de/people/SeelenBilder/explore?asc=u&page=1&sortOrder=recent" target="_blank" class="btn">Zum Redbubble Shop</a>
                 </div>
 
                 <div class="card">
