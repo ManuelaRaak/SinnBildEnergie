@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SinnBildEnergie | Vom Funktionieren ins Spüren</title>
-    <!-- Google Fonts: DM Sans & Great Vibes -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <title>SinnBildEnergie – Ein geschützter Raum für feinfühlige Frauen & Mamas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Great+Vibes&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-color: #F9F6F0;
-            --text-color: #2C2C2C;
             --deep-blue: #1A365D;
             --wine-red: #7A2021;
             --gold: #C5A059;
+            --cream: #F9F6F0;
             --white: #FFFFFF;
+            --text-dark: #2D3748;
+            --text-muted: #4A5568;
+            --border-light: rgba(197, 160, 89, 0.25);
         }
 
         * {
@@ -23,156 +29,373 @@
         }
 
         body {
+            background-color: var(--cream);
+            color: var(--text-dark);
             font-family: 'DM Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
+        /* Hero Header Section */
         header {
+            background-color: var(--deep-blue);
+            color: var(--cream);
             text-align: center;
-            padding: 4rem 2rem 2rem;
-            background-color: var(--white);
-            border-bottom: 2px solid var(--gold);
+            padding: 80px 20px 60px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .logo-subtitle {
+        header h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 2.8rem;
-            color: var(--wine-red);
-            margin-bottom: 0.2rem;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            color: var(--deep-blue);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
+            font-size: 4.5rem;
             color: var(--gold);
-            font-weight: 500;
-            margin-top: 0.5rem;
-            font-style: italic;
+            font-weight: normal;
+            margin-bottom: 10px;
+            line-height: 1.2;
         }
 
-        main {
-            max-width: 800px;
+        header .subtitle {
+            font-size: 1.25rem;
+            color: var(--cream);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            opacity: 0.95;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
         }
 
-        .intro {
+        /* Container & Main Layout */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .section-title {
             text-align: center;
-            margin-bottom: 3rem;
-            font-size: 1.15rem;
             color: var(--deep-blue);
+            font-size: 2rem;
+            margin-bottom: 30px;
+            position: relative;
         }
 
-        .cards-container {
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Frauenraum Main Feature Card */
+        .frauenraum-card {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFFDF9 100%);
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(197, 160, 89, 0.15);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .frauenraum-card h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.2rem;
+            color: var(--wine-red);
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .frauenraum-card .tagline {
+            font-size: 1.2rem;
+            color: var(--deep-blue);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .frauenraum-card p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Benefits List inside Frauenraum */
+        .benefits-list {
+            list-style: none;
             display: grid;
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .benefits-list li {
+            background-color: var(--cream);
+            padding: 12px 18px;
+            border-radius: 8px;
+            border-left: 4px solid var(--wine-red);
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        /* Accordion / Collapsible Section */
+        details {
+            background-color: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            border-color: var(--gold);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            padding: 18px 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--deep-blue);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '＋';
+            font-size: 1.3rem;
+            color: var(--gold);
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        details[open] summary::after {
+            content: '－';
+            color: var(--wine-red);
+        }
+
+        .accordion-content {
+            padding: 0 24px 24px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            border-top: 1px solid var(--cream);
+            margin-top: 5px;
+        }
+
+        .accordion-content p {
+            margin-top: 15px;
+        }
+
+        /* Grid for Offers & Channels */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 50px;
         }
 
         .card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            background-color: var(--white);
+            padding: 30px 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border-light);
             text-align: center;
-            border-top: 5px solid var(--deep-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card h2 {
-            color: var(--deep-blue);
-            margin-bottom: 0.75rem;
-            font-size: 1.6rem;
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(122, 32, 33, 0.08);
+            border-color: var(--gold);
+        }
+
+        .card h3 {
+            color: var(--wine-red);
+            font-size: 1.35rem;
+            margin-bottom: 12px;
         }
 
         .card p {
-            margin-bottom: 1.5rem;
-            color: #555;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            flex-grow: 1;
         }
 
+        /* Buttons */
         .btn {
             display: inline-block;
-            background-color: var(--wine-red);
+            padding: 12px 28px;
+            background-color: var(--deep-blue);
             color: var(--white);
-            padding: 0.85rem 2rem;
-            border-radius: 4px;
             text-decoration: none;
+            border-radius: 30px;
             font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: background-color 0.2s;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
         }
 
         .btn:hover {
-            background-color: #5e1819;
+            background-color: var(--wine-red);
+            transform: scale(1.02);
         }
 
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--white);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--deep-blue);
+        }
+
+        /* Footer */
         footer {
+            background-color: var(--deep-blue);
+            color: var(--cream);
             text-align: center;
-            padding: 2.5rem;
-            font-size: 0.95rem;
-            color: var(--deep-blue);
-            background-color: var(--white);
-            border-top: 1px solid var(--gold);
-            margin-top: 4rem;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            margin-top: auto;
         }
 
-        footer a {
-            color: var(--wine-red);
-            text-decoration: none;
+        footer p {
+            opacity: 0.8;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 3.2rem;
+            }
+            .frauenraum-card {
+                padding: 25px 18px;
+            }
+            .frauenraum-card h2 {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-subtitle">SinnBildEnergie</div>
-        <h1>Vom Funktionieren ins Spüren</h1>
-        <div class="tagline">Ein Raum für sensible Frauen & Mamas</div>
+        <h1>SinnBildEnergie</h1>
+        <div class="subtitle">Ein geschützter Raum für feinfühlige Frauen & Mamas</div>
     </header>
 
     <main>
-        <div class="intro">
-            <p>Willkommen in deinem geschützten Raum. Lass den Alltag hinter dir, verbinde dich mit deiner Intuition und finde zurück zu deiner ureigenen Kraft.</p>
-        </div>
 
-        <div class="cards-container">
-            <!-- Patreon Mitgliedschaft -->
-            <section class="card" style="border-top-color: var(--wine-red);">
-                <h2>Mitgliedschaft & FrauenRaum</h2>
-                <p>Werde Teil unserer Gemeinschaft. Erhalte monatliche Impulse, Begleitung und den geschützten Austausch auf Patreon.</p>
-                <a href="https://www.patreon.com/c/sinnbildenergie/membership" class="btn" target="_blank" rel="noopener">Mitglied werden</a>
-            </section>
+        <!-- Frauenraum Section -->
+        <section id="frauenraum" class="frauenraum-card">
+            <h2>Der Frauenraum</h2>
+            <div class="tagline">Ankommen. Durchatmen. In Verbindung gehen.</div>
+            <p>
+                Der Frauenraum ist ein vertrauter, geschützter Ort der Begegnung und des Austauschs. 
+                Hier darfst du so sein, wie du bist – ohne Erwartungen, ohne Rollen, ganz bei dir.
+            </p>
 
-            <!-- Luma Events -->
-            <section class="card" style="border-top-color: var(--deep-blue);">
-                <h2>MalZeit & Events</h2>
-                <p>Erlebe unsere gemeinsamen kreativen Auszeiten und Live-Termine. Sichere dir deinen Platz bei den kommenden Luma-Events.</p>
-                <a href="https://luma.com/calendar/manage/cal-AwxBixdOuc00jRW" class="btn" target="_blank" rel="noopener">Termine ansehen</a>
-            </section>
+            <ul class="benefits-list">
+                <li>✨ Regelmäßige Frauenkreise & Impulse</li>
+                <li>🌿 Achtsamkeit & Selbstfürsorge im Alltag</li>
+                <li>💛 Gemeinschaft & ehrlicher Austausch</li>
+                <li>🌸 Raum für deine Emotionen & Bedürfnisse</li>
+            </ul>
 
-            <!-- Redbubble Shop -->
-            <section class="card" style="border-top-color: var(--gold);">
-                <h2>Kunst & Shop</h2>
-                <p>Entdecke beseelte Motive, Bilder und Produkte im Redbubble-Shop, der dein Zuhause und deinen Alltag verzaubert.</p>
-                <a href="https://www.redbubble.com/de/people/SeelenBilder/explore?_gl=1%2A193zkg3%2A_up%2AMQ..&asc=u&gbraid=0AAAAADuDTRxxgHB1aFKX4Q7C5lDPRES2A&gclid=CjwKCAjw88HWBhA3EiwAo2Zd6A6alxKtqMaeFY8MdbtUWBtnxBPyRVbTYwxxBU981ckCdjA6Mye-fRoC4EwQAvD_BwE&page=1&sortOrder=recent" class="btn" target="_blank" rel="noopener">Zum Shop</a>
-            </section>
-        </div>
+            <a href="https://lu.ma" target="_blank" class="btn btn-gold" style="margin-top: 15px;">Aktuelle Frauenraum-Termine ansehen</a>
+        </section>
+
+        <!-- How to Join / Accordion Section -->
+        <section style="margin-bottom: 50px;">
+            <h2 class="section-title">Wie du mitmachen kannst</h2>
+
+            <details>
+                <summary>1. Termine & Frauenkreise auf Luma</summary>
+                <div class="accordion-content">
+                    <p>
+                        Über meine Luma-Eventseite findest du alle anstehenden Online-Treffen, Offline-Frauenkreise und spontane Impulse. Du kannst dich dort direkt anmelden und die Termine in deinen Kalender eintragen.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>2. Stetiger Austausch & Begleitung auf Patreon</summary>
+                <div class="accordion-content">
+                    <p>
+                        Möchtest du regelmäßig tiefer eintauchen? Auf Patreon begleite ich dich mit exklusiven Audiotagbüchern, monatlichen Impulsen, Meditationen und einem engem Austausch in unserer Community.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>3. Inspirationen & Kreativ-Shop</summary>
+                <div class="accordion-content">
+                    <p>
+                        In meinem Redbubble-Shop findest du liebevoll gestaltete Alltagsbegleiter, Affirmationskarten und Inhaltsimpulse, die dich an deine innere Kraft erinnern.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+        <!-- Further Offerings Grid -->
+        <section>
+            <h2 class="section-title">Alle Kanäle & Angebote</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>Community & Patreon</h3>
+                    <p>Vertiefe deine Praxis, erhalte exklusive Impulse und sei Teil unserer festen Frauenkreis-Community.</p>
+                    <a href="https://www.patreon.com" target="_blank" class="btn">Zu Patreon</a>
+                </div>
+
+                <div class="card">
+                    <h3>Events & Treffen</h3>
+                    <p>Finde alle anstehenden Frauenräume, Workshops und Auszeiten im Überblick.</p>
+                    <a href="https://lu.ma" target="_blank" class="btn btn-gold">Events auf Luma</a>
+                </div>
+
+                <div class="card">
+                    <h3>Kreativ-Shop</h3>
+                    <p>Entdecke liebevoll gestaltete Designs und Inspirationen für deine tägliche Auszeit.</p>
+                    <a href="https://www.redbubble.com" target="_blank" class="btn">Zum Redbubble Shop</a>
+                </div>
+
+                <div class="card">
+                    <h3>Persönlicher Kontakt</h3>
+                    <p>Hast du Fragen, Wünsche oder möchtest dich persönlich austauschen?</p>
+                    <a href="mailto:deine-email@gmail.com" class="btn btn-gold">E-Mail schreiben</a>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>Kontakt: <a href="mailto:sinnbildenergie@gmail.com">sinnbildenergie@gmail.com</a></p>
-        <p style="margin-top: 0.5rem;">&copy; 2026 SinnBildEnergie. Alle Rechte vorbehalten.</p>
+        <p>&copy; SinnBildEnergie. Alle Rechte vorbehalten.</p>
     </footer>
 
 </body>
