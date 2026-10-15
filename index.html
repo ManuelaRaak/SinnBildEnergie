@@ -123,7 +123,7 @@
             margin-right: auto;
         }
 
-        /* Akkordeon "Wie du mitmachen kannst" */
+        /* Akkordeon-Stile */
         details {
             background-color: #0D1F42;
             border: 1px solid #D4AF37;
@@ -171,7 +171,7 @@
             margin-top: 15px;
         }
 
-        /* Grid Services/Karten */
+        /* Grid Services & Erfahrungsberichte */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -203,6 +203,24 @@
             color: #F8F5EE;
             margin-bottom: 20px;
             flex-grow: 1;
+        }
+
+        /* Erfahrungsberichte Styling */
+        .testimonial-card {
+            background-color: #0D1F42;
+            border: 1px solid #D4AF37;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            color: #F8F5EE;
+            line-height: 1.6;
         }
 
         /* Buttons */
@@ -263,15 +281,24 @@
                 Der Frauenraum ist ein vertrauter, geschützter Ort der Begegnung und des Austauschs. 
                 Hier darfst du so sein, wie du bist – ohne Erwartungen, ohne Rollen, ganz bei dir.
             </p>
-            <a href="https://luma.com/home" target="_blank" class="btn btn-gold">Aktuelle Frauenraum-Termine ansehen</a>
+            <a href="https://www.patreon.com/c/sinnbildenergie/membership" target="_blank" class="btn btn-gold">Zur Frauenraum-Community auf Patreon</a>
         </section>
 
-        <!-- Wie du mitmachen kannst (Akkordeon) -->
+        <!-- Wie du mitmachen kannst -->
         <section style="margin-bottom: 45px;">
             <h2 class="section-title">Wie du mitmachen kannst</h2>
 
             <details>
-                <summary>1. Termine & Frauenkreise auf Luma</summary>
+                <summary>1. Stetiger Austausch & Begleitung auf Patreon</summary>
+                <div class="accordion-content">
+                    <p>
+                        Möchtest du regelmäßig tiefer eintauchen? Auf Patreon begleite ich dich mit Impulsen und einem engen Austausch in unserer Community.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>2. Termine & Frauenkreise auf Luma</summary>
                 <div class="accordion-content">
                     <p>
                         Über meine Luma-Eventseite findest du alle anstehenden Online-Treffen, Offline-Frauenkreise und spontane Impulse. Du kannst dich dort direkt anmelden und die Termine in deinen Kalender eintragen.
@@ -280,22 +307,91 @@
             </details>
 
             <details>
-                <summary>2. Stetiger Austausch & Begleitung auf Patreon</summary>
-                <div class="accordion-content">
-                    <p>
-                        Möchtest du regelmäßig tiefer eintauchen? Auf Patreon begleite ich dich mit Impulsen, Meditationen und einem engem Austausch in unserer Community.
-                    </p>
-                </div>
-            </details>
-
-            <details>
-                <summary>3. Inspirationen & Kreativ-Shop</summary>
+                <summary>3. Inspirationen & Kreativ-Shop auf Redbubble</summary>
                 <div class="accordion-content">
                     <p>
                         In meinem Redbubble-Shop findest du liebevoll gestaltete Alltagsbegleiter und Inhaltsimpulse, die dich an deine innere Kraft erinnern.
                     </p>
                 </div>
             </details>
+        </section>
+
+        <!-- Häufige Fragen & Einwände -->
+        <section style="margin-bottom: 45px;">
+            <h2 class="section-title">Häufige Fragen & Antworten</h2>
+
+            <details>
+                <summary>Ich habe kaum Zeit im Alltag – lohnt sich das für mich?</summary>
+                <div class="accordion-content">
+                    <p>
+                        Der Frauenraum ist kein weiterer Punkt auf deiner To-Do-Liste. Du musst an nichts regelmäßig teilnehmen. Alle Impulse und Treffen sind so gestaltet, dass du sie ganz flexibel in deinen Alltag integrieren kannst – genau dann, wenn du eine Pause brauchst.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Ich bin eher zurückhaltend – muss ich etwas sagen?</summary>
+                <div class="accordion-content">
+                    <p>
+                        Nein, absolut nicht. Du darfst einfach nur lauschen, ankommen und da sein. Es gibt keinen Zwang, dich zu äußern oder zu erklären. Auch dein stilles Dasein ist von Herzen willkommen.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Was passiert, wenn mein Kind dazwischenkommt?</summary>
+                <div class="accordion-content">
+                    <p>
+                        Als Mama bist du hier genau richtig. Kinder, Unterbrechungen und der echte Alltag gehören dazu. Du kannst dich jederzeit stummschalten, dein Video ausmachen oder kurz weggehen, ohne dich rechtfertigen zu müssen.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Brauche ich Vorerfahrung mit Frauenkreisen?</summary>
+                <div class="accordion-content">
+                    <p>
+                        Vorerfahrung brauchst du keine. Wir arbeiten frei von komplizierten Methoden. Es geht schlichtweg um das ehrliche Spüren, Innehalten und Miteinander.
+                    </p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Was unterscheidet Patreon, Luma und WhatsApp?</summary>
+                <div class="accordion-content">
+                    <p>
+                        Auf <strong>Patreon</strong> findest du deine stetige Begleitung, Impulse und die feste Community. Über <strong>Luma</strong> buchst du einzelne Events und Online-Kreise. Über <strong>WhatsApp</strong> kannst du mir ganz unkompliziert und persönlich Fragen stellen.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+        <!-- Echte Erfahrungen aus den Räumen -->
+        <section style="margin-bottom: 45px;">
+            <h2 class="section-title">Echte Erfahrungen aus den Räumen</h2>
+            <div class="grid">
+                
+                <div class="testimonial-card">
+                    <p>Eine Mama von zwei Kindern konnte sich nach den Treffen wieder ganz bewusst mit sich selbst, ihren individuellen Bedürfnissen und ihren eigenen Kräften verbinden.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>Eine Mama fand im Alltag wieder zur echten Freude mit ihren Kindern zurück – eine Freude, die vorher immer mehr dem reinen Funktionieren gewichen war.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>Eine Frau spürt jetzt klar ihre eigenen Grenzen, kann diese offen aussprechen und erlebt dadurch spürbar mehr Leichtigkeit im Familienleben.</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>Zwei Frauen haben sich wieder mit ihrem Körper verbunden und vertrauen heute ganz bewusst ihren eigenen Wahrnehmungen.</p>
+                </div>
+
+                <div class="testimonial-card" style="grid-column: 1 / -1;">
+                    <p style="text-align: center;">Eine Frau begleitet ihre Kinder heute mit viel mehr innerer Ruhe, Gelassenheit und Entspannung durch den Alltag.</p>
+                </div>
+
+            </div>
         </section>
 
         <!-- Kacheln / Kanäle -->
